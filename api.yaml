@@ -1,0 +1,45 @@
+walkoff: '0.1'
+info:
+  version: 1.0.0
+  title: Graylog
+  description: App to conduct Graylog queries
+  contact:
+    name: Bill Murrin
+  license:
+    name: Creative Commons
+actions:
+  param:
+    run: app.Graylog.param
+    description: Set a parameter for the Graylog query
+    parameters:
+      - name: key
+        required: true
+        type: string
+      - name: value
+        required: true
+        type: string
+  relative_search:
+    run: app.Graylog.relative_search
+    description: Conducts and returns a relative search against the Graylog API.
+    parameters:
+      - name: query
+        required: true
+        type: string
+    returns:
+      Success:
+        schema:
+          type: object
+devices:
+  Graylog:
+    description: Graylog Server Connection
+    fields:
+      - name: apikey
+        type: string
+        description: Api Key for Graylog Connection
+        placeholder: Graylog API Key
+        required: true
+      - name: serveruri
+        description: URI to Graylog API (Defaults to 9000)
+        type: string
+        placeholder: Server URI
+        required: true
