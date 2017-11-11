@@ -1,0 +1,131 @@
+{
+    "name": "Graylog",
+    "uid": "fb7486f6bb5c4993adc08cf8c3d517bf",
+    "workflows": [
+        {
+            "accumulated_risk": 0.0,
+            "name": "Relative Search Test",
+            "start": "2",
+            "steps": [
+                {
+                    "action": "param",
+                    "app": "Graylog",
+                    "device": "",
+                    "inputs": [
+                        {
+                            "name": "key",
+                            "value": "limit"
+                        },
+                        {
+                            "name": "value",
+                            "value": "50"
+                        }
+                    ],
+                    "name": "1",
+                    "next_steps": [
+                        {
+                            "flags": [],
+                            "name": "2",
+                            "status": "Success",
+                            "uid": "1f3a2700add9445c8bd30fd9be863835"
+                        }
+                    ],
+                    "position": {
+                        "x": 50,
+                        "y": 150
+                    },
+                    "risk": 0,
+                    "triggers": [],
+                    "uid": "b498c2e8cc634643b8e440adf948a328",
+                    "widgets": []
+                },
+                {
+                    "action": "param",
+                    "app": "Graylog",
+                    "device": "",
+                    "inputs": [
+                        {
+                            "name": "key",
+                            "value": "range"
+                        },
+                        {
+                            "name": "value",
+                            "value": "300"
+                        }
+                    ],
+                    "name": "2",
+                    "next_steps": [
+                        {
+                            "flags": [],
+                            "name": "4",
+                            "status": "Success",
+                            "uid": "0cb0daa311d2424198e9a048bd5d3c4e"
+                        }
+                    ],
+                    "position": {
+                        "x": 130,
+                        "y": 150
+                    },
+                    "risk": 0,
+                    "triggers": [],
+                    "uid": "27ff76d4630a4826a68ef6cf80215d6f",
+                    "widgets": []
+                },
+                {
+                    "action": "relative_search",
+                    "app": "Graylog",
+                    "device": "",
+                    "inputs": [
+                        {
+                            "name": "query",
+                            "value": "source:*"
+                        }
+                    ],
+                    "name": "5",
+                    "next_steps": [],
+                    "position": {
+                        "x": 170,
+                        "y": 230
+                    },
+                    "risk": 0,
+                    "triggers": [],
+                    "uid": "0e7f4e406f6f46f9b24f0e098bda690d",
+                    "widgets": []
+                },
+                {
+                    "action": "param",
+                    "app": "Graylog",
+                    "device": "",
+                    "inputs": [
+                        {
+                            "name": "key",
+                            "value": "fields"
+                        },
+                        {
+                            "name": "value",
+                            "value": "source"
+                        }
+                    ],
+                    "name": "4",
+                    "next_steps": [
+                        {
+                            "flags": [],
+                            "name": "5",
+                            "status": "Success",
+                            "uid": "7a1fe90ad1b94a9b80627a8d346ec6bb"
+                        }
+                    ],
+                    "position": {
+                        "x": 210,
+                        "y": 150
+                    },
+                    "risk": 0,
+                    "triggers": [],
+                    "uid": "836d62b5a9414466a334c3a6d053c293",
+                    "widgets": []
+                }
+            ],
+            "uid": "2df505e8fb964ab39179e95949eaa759"
+        }
+    ]
+}
