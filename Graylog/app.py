@@ -3,14 +3,10 @@ from pygraylog.graylogapi import GraylogAPI
 
 
 class Graylog(App):
-    def __init__(self, name=None, device="Graylog"):
-        print("Device")
+    def __init__(self, name=None, device=None):
         device = "Graylog"
-        print(device)
         App.__init__(self, name, device)
         self.api = GraylogAPI(self.device_fields['serveruri'], api_key=self.device_fields['apikey'])
-        print("API")
-        print(self.api)
         self.query_params = {}
 
     @action
@@ -20,8 +16,6 @@ class Graylog(App):
     @action
     def relative_search(self, query):
 
-        print("The fields are")
-        print(self.query_params)
         if 'query' not in self.query_params:
             self.query_params['query'] = query
 
